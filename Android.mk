@@ -377,7 +377,7 @@ else
 LOCAL_CPPFLAGS += -DDUAL_VIEW_MODE=0
 endif
 
-ifneq ($(filter rh500 rh500A, $(strip $(BOARD_RUIHE_VERSION))), )
+ifneq ($(filter rh500 rh500A rh201, $(strip $(BOARD_RUIHE_VERSION))), )
 LOCAL_CPPFLAGS += -DUSE_PLANE_RESERVED
 endif
 
