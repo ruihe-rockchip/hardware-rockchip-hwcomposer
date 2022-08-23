@@ -381,6 +381,12 @@ ifneq ($(filter rh500 rh500A rh201, $(strip $(BOARD_RUIHE_VERSION))), )
 LOCAL_CPPFLAGS += -DUSE_PLANE_RESERVED
 endif
 
+ifneq ($(filter rk3399_rh201 rk3399_rh500a, $(strip $(RUIHE_MODEL))), )
+$(warning "======================= hwcomposer open vop")
+LOCAL_CPPFLAGS += -DUSE_PLANE_RESERVED
+endif
+
+
 #USE_PLANE_RESERVED enable
 #LOCAL_CPPFLAGS += -DUSE_PLANE_RESERVED
 
